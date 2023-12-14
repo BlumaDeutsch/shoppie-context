@@ -1,0 +1,9 @@
+#user{
+    display: flex;
+    padding: 20px;
+    background: red;
+    border: 2px solid black;
+}
+h2{
+    padding: 8px;
+}
