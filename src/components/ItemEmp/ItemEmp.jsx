@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { GrEdit } from "react-icons/gr";
 //import ItemuserEdit from './ItemuserEdit';
-import usersContext from '../../context/users';
+import usersContext from '../../context/context';
 import './ItemEmp.css';
 
 // props

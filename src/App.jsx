@@ -1,6 +1,6 @@
 import React from 'react'
 import AppEmp  from './components/AppEmp/AppEmp'
-import { Provider } from './context/users'
+import { Provider } from './context/context'
 
 const App = () => {
   

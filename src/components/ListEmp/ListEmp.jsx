@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import ItemEmp from "../ItemEmp/ItemEmp";
-import usersContext from "../../context/users";
+import usersContext from "../../context/context";
 
 export default function ListEmp() {
     const { users } = useContext(usersContext);

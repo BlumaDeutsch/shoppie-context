@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Button(props) {
-    const { select, children } = props;
+    const { type, select, children } = props;
 
     return (
-        <button onClick={select}>{children}</button>
+        <button type={type} onClick={select}>{children}</button>
     )
 }
