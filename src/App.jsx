@@ -1,5 +1,6 @@
 import React from 'react'
-import AppEmp  from './components/AppEmp/AppEmp'
+import MyApp from './components/myApp/MyApp'
+import AppEmp  from './components/myApp/MyApp'
 import { Provider } from './context/context'
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
   return (
   
       <Provider>
-         <AppEmp/>
+         <MyApp/>
       </Provider>
       
    

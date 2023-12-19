@@ -1,17 +1,19 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ListEmp from '../ListEmp/ListEmp';
 import ProductsContext from '../../context/context';
 import Button from '../button/Button';
 import Input from '../input/Input';
 import Form from '../form/Form';
+import context from '../../context/context';
+import Work from '../work/Work';
 
-const AppEmp = () => {
-    const { createResume } = useContext(ProductsContext)
 
+const MyApp = () => {
     useEffect(() => {
         console.log('start');
     }, []);
 
+    const { work } = useContext(context);
 
 
 
@@ -22,7 +24,14 @@ const AppEmp = () => {
             <Input select={getParam} />
             <ListEmp /> */}
             <Form></Form>
+            {work?.map((x) => {
+                return (
+                    <>
+                        <Work work={x}></Work>
+                    </>
+                )
 
+            })}
             {/* <Button select={createResume}>Create a resume</Button> */}
 
         </>
@@ -30,4 +39,4 @@ const AppEmp = () => {
     )
 }
 
-export default AppEmp
+export default MyApp
