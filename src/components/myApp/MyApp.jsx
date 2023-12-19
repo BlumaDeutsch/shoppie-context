@@ -19,10 +19,7 @@ const MyApp = () => {
 
     return (
         <>
-            {/* <Button select={getUsersByNat}>Search by nat</Button>
-            <Button select={getUsersByGender}>Search by gender</Button>
-            <Input select={getParam} />
-            <ListEmp /> */}
+        
             <Form></Form>
             <PDF></PDF>
 

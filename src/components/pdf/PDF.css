@@ -1,3 +1,6 @@
 #pdf{
-    color: red;
+    text-align: center;
+    width: 70%;
+    padding: 8%;
+    background: seashell;
 }

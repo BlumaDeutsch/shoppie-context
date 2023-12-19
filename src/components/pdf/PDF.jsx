@@ -14,8 +14,8 @@ export default function PDF() {
     return (
         <div>
             <button onClick={() => generatePDF(targetRef, { filename: 'page.pdf' })}>Download PDF</button>
-            <div ref={targetRef}>
-                <h2 id='pdf'>Content to be included in the PDF</h2>
+            <div id='pdf' ref={targetRef}>
+                <h1>resume</h1>
                 <Name name={name}></Name>
                 {work?.map((x) => {
                     return (
