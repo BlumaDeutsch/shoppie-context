@@ -6,7 +6,7 @@ import Input from '../input/Input';
 import Form from '../form/Form';
 import context from '../../context/context';
 import Work from '../work/Work';
-
+import PDF from '../pdf/PDF';
 
 const MyApp = () => {
     useEffect(() => {
@@ -24,15 +24,7 @@ const MyApp = () => {
             <Input select={getParam} />
             <ListEmp /> */}
             <Form></Form>
-            {work?.map((x) => {
-                return (
-                    <>
-                        <Work work={x}></Work>
-                    </>
-                )
-
-            })}
-            {/* <Button select={createResume}>Create a resume</Button> */}
+            <PDF></PDF>
 
         </>
 

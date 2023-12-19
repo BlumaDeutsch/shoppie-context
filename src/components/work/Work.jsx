@@ -1,14 +1,11 @@
-import React, { useContext } from 'react'
-import context from '../../context/context';
+import React from 'react'
 
-export default function Work() {
-    const { work } = useContext(context);
-
+export default function Work({work}) {
     return (
         <div>
-            <h3>{work.company}</h3>
-            <h4>{work.form}</h4>
-            <h4>{work.to}</h4>
+            <h3>company: {work.company}</h3>
+            <h4>from: {work.from}</h4>
+            <h4>to: {work.to}</h4>
         </div>
     )
 }

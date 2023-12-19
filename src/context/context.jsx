@@ -2,6 +2,12 @@ import { createContext, useState } from "react";
 
 // import { firestore } from "../firebase/index";
 
+const Component = () => {
+
+}
+
+
+
 const ProductsContext = createContext()
 
 const Provider = ({ children }) => {
@@ -31,18 +37,11 @@ const Provider = ({ children }) => {
     //   setWork([...work, { company: e.target.company.value, from: i + 1 }]);
     // }
     setName(e.target.name.value);
-    setWork([{ company: e.target.company1.value, from:  e.target.fromC1.value, to: e.target.toC1.value}, { company: e.target.company2.value, from:  e.target.fromC2.value, to: e.target.toC2.value}, { company: e.target.company3.value, from:  e.target.fromC3.value, to: e.target.toC3.value}]);
-    setEducation([{ school: e.target.school1.value, from:  e.target.fromS1.value, to: e.target.toS1.value}, { school: e.target.school2.value, from:  e.target.fromS2.value, to: e.target.toS2.value}, { school: e.target.school3.value, from:  e.target.fromS3.value, to: e.target.toS3.value}]);
-    //const array = await firestore.collection('try').get();
-    console.log(name, work, education);
+    setWork([{ company: e.target.company1.value, from: e.target.fromC1.value, to: e.target.toC1.value }, { company: e.target.company2.value, from: e.target.fromC2.value, to: e.target.toC2.value }, { company: e.target.company3.value, from: e.target.fromC3.value, to: e.target.toC3.value }]);
+    setEducation([{ school: e.target.school1.value, from: e.target.fromS1.value, to: e.target.toS1.value }, { school: e.target.school2.value, from: e.target.fromS2.value, to: e.target.toS2.value }, { school: e.target.school3.value, from: e.target.fromS3.value, to: e.target.toS3.value }]);
   }
 
-  const createPDF = (resume) => {
-    const pdf = new 
-  }
-
-
-  const shared = { createResume, first }
+  const shared = { createResume, work, education, name }
 
   return (
     <ProductsContext.Provider value={shared}>
