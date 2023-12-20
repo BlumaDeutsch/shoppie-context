@@ -1,5 +1,4 @@
-import react from 'react'
-import { Routes, Route, } from "React-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import Home from '../../pages/home/Home';
 import Loggin from '../../pages/loggin/Loggin';
 import MyApp from '../../pages/myApp/MyApp';

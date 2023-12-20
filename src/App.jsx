@@ -1,19 +1,19 @@
 // import react from 'react'
 
 import { Provider } from './context/context'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom"
 import AppRoutes from './components/appRoutes/AppRoutes'
 
 const App = () => {
 
   return (
+    <BrowserRouter>
 
-    <Provider>
-      <BrowserRouter>
+      <Provider>
         <AppRoutes />
-      </BrowserRouter>
 
-    </Provider>
+      </Provider>
+    </BrowserRouter>
 
 
   )

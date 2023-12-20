@@ -3,7 +3,7 @@ import Button from '../../components/button/Button';
 
 export default function Register() {
   return (
-    <form onSubmit={}>
+    <form onSubmit={() => {return <Link to='/loggin'/>}}>
       <label>Enter full name: </label>
       <input type="text" />
       <label>Enter email: </label>
