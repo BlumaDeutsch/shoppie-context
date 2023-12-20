@@ -1,4 +1,4 @@
-import React from 'react'
+import react from 'react'
 import { useRef, useContext } from 'react';
 import generatePDF from 'react-to-pdf';
 import './PDF.css'

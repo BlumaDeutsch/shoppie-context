@@ -1,4 +1,4 @@
-import React from 'react'
+import react from 'react'
 
 export default function Button(props) {
     const { type, select, children } = props;

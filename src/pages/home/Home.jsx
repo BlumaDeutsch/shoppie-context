@@ -1,11 +1,9 @@
-import React from 'react'
+import react from 'react'
 
 export default function Home() {
-    const func = () => {
-    }
     return (
         <>
-            
+            <p>Home</p>
         </>
     )
 }
