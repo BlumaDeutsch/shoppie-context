@@ -11,7 +11,7 @@ export default function AppRoutes() {
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/loggin' element={<Loggin />} />
-            <Route path='/resume' element={<MyApp />} />
+            <Route path='/resume/:name' element={<MyApp />} />
         </Routes>
     )
 }

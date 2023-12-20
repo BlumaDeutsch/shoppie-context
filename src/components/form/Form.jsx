@@ -7,7 +7,7 @@ export default function Form() {
     return (
         <form onSubmit={createResume}>
             <label>Full name: </label>
-            <input name='name' type="text" />
+            <input name='name' type="text" value='name'/>
             <br />
 
             <label>Work experience: </label>

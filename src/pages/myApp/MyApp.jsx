@@ -7,7 +7,6 @@ const MyApp = () => {
         console.log('start');
     }, []);
 
-
     return (
         <>
         

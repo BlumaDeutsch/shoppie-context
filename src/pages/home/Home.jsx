@@ -1,14 +1,15 @@
-import react from 'react'
-import { Link } from "react-router-dom";
 import Button from '../../components/button/Button';
+import { useNavigate  } from "react-router-dom";
 
 export default function Home() {
+    const navigate = useNavigate();
+
     return (
         <>
             <h1>resume builder</h1>
-            <Link to='/loggin'>loggin</Link>
+            <Button type='button' select={() => {return navigate('/loggin');}}>loggin</Button>
             <p>dont have an account?</p>
-            <Link to='/register'>register</Link>
+            <Button type='button' select={() => {return navigate('/register');}}>register</Button>
         </>
     )
 }

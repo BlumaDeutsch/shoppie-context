@@ -1,5 +1,5 @@
-import { createContext, useState  } from "react";
-import { useNavigate  } from "react-router-dom";
+import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // import { firestore } from "../firebase/index";
 
@@ -33,6 +33,7 @@ const Provider = ({ children }) => {
 
 
   const [errorLogin, setErrorLogin] = useState('');
+  const [errorPassword, setErrorPassword] = useState('');
 
   const [users, setUsers] = useState([{
     name: 'moshe',
@@ -40,20 +41,34 @@ const Provider = ({ children }) => {
     password: '123'
   }])
 
-  const checkIfUserExist = (user) => {
-    user.preventDefault();
+  const checkIfUserExist = (e) => {
+    e.preventDefault();
     users.map((someUser) => {
-      console.log(someUser.email, user.target.email.value);
-      if (someUser.email === user.target.email.value && someUser.password === user.target.password.value){
-        return navigate('/resume');
+      if (someUser.email === e.target.email.value && someUser.password === e.target.password.value) {
+        return navigate(`/resume/${someUser.name}`);
       }
       setErrorLogin('email or password are nor correct');
       return navigate('/loggin');
     })
   }
 
+  const registerUser = (e) => {
+    e.preventDefault();
+    const password = e.target.password.value;
+    const confirmPassword = e.target.confirmPassword.value;
+    console.log(password, confirmPassword);
+    if (password !== confirmPassword) {
+      setErrorPassword('password not match');
+      return navigate('/register');
 
-  const shared = { createResume, work, education, name, users, checkIfUserExist, errorLogin }
+    }
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    setUsers([...users, { name: name, email: email, password: password }]);
+    return navigate('/loggin');
+  }
+
+  const shared = { createResume, work, education, name, users, checkIfUserExist, errorLogin, registerUser, errorPassword }
 
   return (
     <ProductsContext.Provider value={shared}>
