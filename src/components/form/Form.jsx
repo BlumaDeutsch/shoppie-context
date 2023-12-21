@@ -1,13 +1,19 @@
 import React, { useContext } from 'react'
 import Button from '../button/Button';
 import context from '../../context/context';
+import { useParams } from 'react-router-dom';
+
 
 export default function Form() {
     const { createResume } = useContext(context);
+    const { name, email, password } = useParams();
+    const handleSubmit = (e) => {
+        createResume(e, { name, email, password })
+    }
     return (
-        <form onSubmit={createResume}>
+        <form onSubmit={handleSubmit}>
             <label>Full name: </label>
-            <input name='name' type="text" value='name'/>
+            <input name='name' type="text" defaultValue={name} />
             <br />
 
             <label>Work experience: </label>

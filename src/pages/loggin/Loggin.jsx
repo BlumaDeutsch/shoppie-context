@@ -5,11 +5,12 @@ import context from '../../context/context';
 
 export default function Loggin() {
   console.log("loggin");
-  const { checkIfUserExist, errorLogin } = useContext(context);
+  const { checkIfUserExist, errorLogin, users } = useContext(context);
 
   const forgotPassword = () => {
     console.log('so bad :(');
   }
+  console.log(users);
   return (
     <>
       <form onSubmit={checkIfUserExist}>
@@ -21,6 +22,7 @@ export default function Loggin() {
         <Button type='submit'>loggin</Button>
       </form>
       <p>{errorLogin}</p>
+      
     </>
   )
 }

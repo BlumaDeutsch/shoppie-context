@@ -6,10 +6,18 @@ import Work from '../work/Work';
 import Education from '../education/Education';
 import Name from '../name/Name';
 import context from '../../context/context';
+import { useParams } from 'react-router-dom';
 
 export default function PDF() {
-    const { work, education, name } = useContext(context);
-
+    const { work, education, users } = useContext(context);
+    const { name, email, password } = useParams();
+    let user;
+    users.map((someUser) => {
+        if(email === someUser.email && password === someUser.password){
+            user = someUser;
+        }
+    })
+    console.log("pdf: ", user);
     const targetRef = useRef();
     return (
         <div>
@@ -17,7 +25,7 @@ export default function PDF() {
             <div id='pdf' ref={targetRef}>
                 <h1>resume</h1>
                 <Name name={name}></Name>
-                {work?.map((x) => {
+                {user.work?.map((x) => {
                     return (
                         <>
                             <Work work={x}></Work>
@@ -25,7 +33,7 @@ export default function PDF() {
                     )
 
                 })}
-                {education?.map((x) => {
+                {user.education?.map((x) => {
                     return (
                         <>
                             <Education education={x}></Education>
