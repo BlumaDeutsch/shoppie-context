@@ -13,17 +13,7 @@ const Provider = ({ children }) => {
   const navigate = useNavigate();
 
 
-  const [name, setName] = useState('rivka');
-  const [work, setWork] = useState([{
-    company: '',
-    from: 0,
-    to: 0
-  }]);
-  const [education, setEducation] = useState([{
-    school: '',
-    from: 0,
-    to: 0
-  }]);
+  
 
   const [errorLogin, setErrorLogin] = useState('');
   const [errorPassword, setErrorPassword] = useState('');
@@ -130,7 +120,7 @@ const Provider = ({ children }) => {
 
 
 
-  const shared = { createResume, work, education, name, users, checkIfUserExist, errorLogin, registerUser, errorPassword }
+  const shared = { createResume, users, checkIfUserExist, errorLogin, registerUser, errorPassword }
 
   return (
     <ProductsContext.Provider value={shared}>

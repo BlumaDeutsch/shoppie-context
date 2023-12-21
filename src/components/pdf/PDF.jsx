@@ -9,7 +9,7 @@ import context from '../../context/context';
 import { useParams } from 'react-router-dom';
 
 export default function PDF() {
-    const { work, education, users } = useContext(context);
+    const {users } = useContext(context);
     const { name, email, password } = useParams();
     let user;
     users.map((someUser) => {

@@ -13,16 +13,7 @@ export default function Home() {
             <Button type='button' select={() => { return navigate('/loggin'); }}>loggin</Button>
             <p>dont have an account?</p>
             <Button type='button' select={() => { return navigate('/register'); }}>register</Button>
-            {users.map((user, index) => {
-                return (
-                    <>
-                        <p>name: {user.name}</p>
-                        <p>email: {user.email}</p>
-                        <p>company: {user.work[0].company}</p>
-                        <p>school: {user.education[0].school}</p>
-                    </>
-                )
-            })}
+            
         </>
     )
 }
